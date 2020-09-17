@@ -1,3 +1,3 @@
 class Person < ApplicationRecord
-    has_many :java_scripts
+    has_many :java_bars
 end

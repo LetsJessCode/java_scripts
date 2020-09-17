@@ -46,6 +46,6 @@ class JavaBarsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def java_bar_params
-      params.require(:java_bar).permit(:shop_name, :fav_drink, :least_fav, :recommend, :comment, :people)
+      params.require(:java_bar).permit(:shop_name, :fav_drink, :least_fav, :recommend, :comment, :person)
     end
 end

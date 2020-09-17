@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2020_09_17_185544) do
     t.string "least_fav"
     t.boolean "recommend"
     t.text "comment"
-    t.integer "people_id"
+    t.integer "person_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["people_id"], name: "index_java_bars_on_people_id"
+    t.index ["person_id"], name: "index_java_bars_on_person_id"
   end
 
   create_table "people", force: :cascade do |t|

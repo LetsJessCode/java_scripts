@@ -6,7 +6,7 @@ class CreateJavaBars < ActiveRecord::Migration[6.0]
       t.string :least_fav
       t.boolean :recommend
       t.text :comment
-      t.references :people
+      t.references :person
 
       t.timestamps
     end
