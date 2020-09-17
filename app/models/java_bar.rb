@@ -1,0 +1,2 @@
+class JavaBar < ApplicationRecord
+end

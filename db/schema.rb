@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_145525) do
+ActiveRecord::Schema.define(version: 2020_09_17_185544) do
 
-  create_table "java_scripts", force: :cascade do |t|
+  create_table "java_bars", force: :cascade do |t|
     t.string "shop_name"
     t.string "fav_drink"
     t.string "least_fav"
     t.boolean "recommend"
     t.text "comment"
-    t.integer "person_id", null: false
+    t.integer "people_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["person_id"], name: "index_java_scripts_on_person_id"
+    t.index ["people_id"], name: "index_java_bars_on_people_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -30,5 +30,4 @@ ActiveRecord::Schema.define(version: 2020_09_17_145525) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "java_scripts", "people"
 end

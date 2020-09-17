@@ -1,12 +1,12 @@
-class CreateJavaScripts < ActiveRecord::Migration[6.0]
+class CreateJavaBars < ActiveRecord::Migration[6.0]
   def change
-    create_table :java_scripts do |t|
+    create_table :java_bars do |t|
       t.string :shop_name
       t.string :fav_drink
       t.string :least_fav
       t.boolean :recommend
       t.text :comment
-      t.references :person, null: false, foreign_key: true
+      t.references :people
 
       t.timestamps
     end
