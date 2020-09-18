@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-    people = Person.create([{ name: 'Giovanni'}, {name: 'Miranda'}])
+    java_shops = JavaShop.create([{ shop_name: 'StarBucks'}, {shop_name: 'Jamba Juice'}])
 
-    puts 'People are present!'
+    puts 'Java Shops Ready!'
 
-    JavaBar.create(shop_name: 'Java Club', fav_drink: 'Chocolate Latte', least_fav: 'Mango Capuccino', recommend: 'true', comment: 'I loved going to Java Club! It was such a great atmosphere! The server was hot!', person: people.first)
+    Info.create(fav_drink: 'Chocolate Latte', least_fav: 'Mango Capuccino', recommend: 'true', comment: 'I loved going to Java Club! It was such a great atmosphere! The server was hot!', java_shop: java_shops.first)
 
-    JavaBar.create(shop_name: 'Mocha Bar', fav_drink: 'Mocha Latte', least_fav: 'Vanilla Capuccino', recommend: 'false', comment: 'Though the Mocha Latte was fab! The service was poor, and the live music was not great', person: people.last)
+    Info.create(fav_drink: 'Mocha Latte', least_fav: 'Vanilla Capuccino', recommend: 'false', comment: 'Though the Mocha Latte was fab! The service was poor, and the live music was not great', java_shop: java_shops.last)
 
-    puts 'Javas loaded!'
+    puts 'Info loaded!'

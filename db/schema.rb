@@ -10,24 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_17_185544) do
+ActiveRecord::Schema.define(version: 2020_09_18_164659) do
 
-  create_table "java_bars", force: :cascade do |t|
-    t.string "shop_name"
+  create_table "infos", force: :cascade do |t|
     t.string "fav_drink"
     t.string "least_fav"
     t.boolean "recommend"
     t.text "comment"
-    t.integer "person_id"
+    t.integer "java_shop_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["person_id"], name: "index_java_bars_on_person_id"
+    t.index ["java_shop_id"], name: "index_infos_on_java_shop_id"
   end
 
-  create_table "people", force: :cascade do |t|
-    t.string "name"
+  create_table "java_shops", force: :cascade do |t|
+    t.string "shop_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "infos", "java_shops"
 end
